@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sticky Movie Title Cards</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      scroll-behavior: smooth;
+      font-family: sans-serif;
+      overflow-x: hidden;
+    }
+
+    .page {
+      position: relative;
+      min-height: 100vh;
+      width: 100%;
+      color: white;
+      background-size: cover;
+      background-position: center;
+      padding: 60px 20px;
+    }
+
+    .sticky-title {
+      position: sticky;
+      top: 20px;
+      left: 20px;
+      font-size: 3rem;
+      font-weight: bold;
+      background: rgba(0, 0, 0, 0.5);
+      padding: 15px 30px;
+      border-radius: 10px;
+      z-index: 10;
+      margin-bottom: 30px;
+    }
+
+    .movie-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 60px;
+    }
+
+    .movie-image {
+      width: 500px;
+      max-width: 90%;
+      margin: 40px 0;
+      border: 4px solid white;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    }
+
+    .description {
+      max-width: 900px;
+      font-size: 1.1rem;
+      line-height: 1.7;
+      text-align: center;
+      background: rgba(0, 0, 0, 0.4);
+      padding: 30px;
+      border-radius: 10px;
+    }
+
+    .logo-fixed {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 100px;
+      height: auto;
+      z-index: 1000;
+      border-radius: 8px;
+    }
+
+    .page1 {
+      background-image: url('https://wallpapers.com/images/hd/the-wolverine-poster-p1lpmamgxhsm82qb.jpg');
+    }
+
+    .page2 {
+      background-image: url('https://images3.alphacoders.com/812/812170.jpg');
+    }
+
+    @media (max-width: 600px) {
+      .sticky-title { font-size: 2rem; }
+      .description { font-size: 1rem; }
+      .logo-fixed { width: 80px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Fixed Logo -->
+  <img
+    src="https://img.freepik.com/premium-photo/vintage-inspired-movie-poster-with-classic-film-noir-aesthetic_994764-186885.jpg"
+    alt="Fixed Logo"
+    class="logo-fixed"
+  />
+
+  <!-- Page 1: The Wolverine -->
+  <section class="page page1">
+    <div class="sticky-title">The Wolverine</div>
+    <div class="movie-content">
+      <img
+        class="movie-image"
+        src="https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/the-wolverine-et00014183-28-12-2016-06-39-25.jpg"
+        alt="The Wolverine Movie Scene"
+      />
+      <div class="description">
+        Haunted by his past and burdened by immortality, Logan travels to Japan where he faces his ultimate nemesis.
+        <br><br>
+        “The Wolverine” blends samurai honor with mutant power, pushing our hero to his physical and emotional limits.
+        <br><br>
+        This is the story of pain, loss, and redemption — the man behind the claws.
+      </div>
+    </div>
+  </section>
+
+  <!-- Page 2: Deadpool -->
+  <section class="page page2">
+    <div class="sticky-title">Deadpool</div>
+    <div class="movie-content">
+      <img
+        class="movie-image"
+        src="https://disney.images.edge.bamgrid.com/ripcut-delivery/v2/variant/disney/8aafac1e-c525-485a-8c6a-c50d10c518ae/compose?aspectRatio=1.78&format=webp&width=1200"
+        alt="Deadpool Movie Scene"
+      />
+      <div class="description">
+        Wade Wilson is a former special forces operative turned mercenary with a twisted sense of humor and a healing factor to match.
+        <br><br>
+        “Deadpool” is a wild, irreverent ride through breaking the fourth wall, hilarious violence, and unconventional heroics.
+        <br><br>
+        With great power comes zero responsibility.
+      </div>
+    </div>
+  </section>
+</body>
+</html>
